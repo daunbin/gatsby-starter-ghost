@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "https://daunb.in",
+    "apiUrl": "https://daunb.herokuapp.com",
     "contentApiKey": "8e487fbefe87eb2589b346f2a7"
   },
   "production": {
-    "apiUrl": "https://daunb.in",
+    "apiUrl": "https://daunb.herokuapp.com",
     "contentApiKey": "8e487fbefe87eb2589b346f2a7"
   }
 }
