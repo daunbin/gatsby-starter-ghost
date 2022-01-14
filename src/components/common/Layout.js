@@ -38,14 +38,12 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <Helmet>
                 <html lang={site.lang} />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <script type="text/javascript" />
-                {(function () {
-                    // DON'T EDIT BELOW THIS LINE
-                    s = document.createElement("script");
-                    s.src = "https://daunbin-1.disqus.com/embed.js";
-                    s.setAttribute("data-timestamp", +new Date());
-                    (document.head || document.body).appendChild(s);
-                })()}
+                <script
+                    src="https://daunbin-1.disqus.com/embed.js"
+                    type="text/javascript"
+                    data-timestamp={+new Date()}
+                />
+
                 <body className={bodyClass} />
             </Helmet>
 
