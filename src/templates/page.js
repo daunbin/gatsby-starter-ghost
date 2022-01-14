@@ -20,11 +20,6 @@ const Page = ({ data, location }) => {
             <MetaData data={data} location={location} type="website" />
             <Helmet>
                 <style type="text/css">{`${page.codeinjection_styles}`}</style>
-                <script
-                    src="https://daunbin-1.disqus.com/embed.js"
-                    type="text/javascript"
-                    data-timestamp={+new Date()}
-                />
             </Helmet>
             <Layout>
                 <div className="container">
@@ -36,7 +31,6 @@ const Page = ({ data, location }) => {
                             className="content-body load-external-scripts"
                             dangerouslySetInnerHTML={{ __html: page.html }}
                         />
-                        <div id="disqus_thread"></div>
                     </article>
                 </div>
             </Layout>
