@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import { useEffect } from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
@@ -19,6 +20,11 @@ import "../../styles/app.css";
  *
  */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
+    useEffect(() => {
+        if (typeof window === "undefined" || !window.document) {
+            return;
+        }
+    }, []);
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
