@@ -35,11 +35,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <script type="text/javascript" />
                 {(function () {
                     // DON'T EDIT BELOW THIS LINE
-                    var d = document,
-                        s = d.createElement("script");
+                    s = document.createElement("script");
                     s.src = "https://daunbin-1.disqus.com/embed.js";
                     s.setAttribute("data-timestamp", +new Date());
-                    (d.head || d.body).appendChild(s);
+                    (document.head || document.body).appendChild(s);
                 })()}
                 <body className={bodyClass} />
             </Helmet>
