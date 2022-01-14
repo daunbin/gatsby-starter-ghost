@@ -38,11 +38,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <Helmet>
                 <html lang={site.lang} />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <script
-                    src="https://daunbin-1.disqus.com/embed.js"
-                    type="text/javascript"
-                    data-timestamp={+new Date()}
-                />
 
                 <body className={bodyClass} />
             </Helmet>
@@ -156,7 +151,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         {/* All the main content gets inserted here, index.js, post.js */}
                         {children}
                     </main>
-                    <div id="disqus_thread"></div>
                 </div>
 
                 <div className="viewport-bottom">
