@@ -33,9 +33,17 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <html lang={site.lang} />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <script
-                    src="https://daunbin-1.disqus.com/embed.js"
                     type="text/javascript"
                 />
+                {
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://daunbin-1.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                    
+                }
                 <body className={bodyClass} />
             </Helmet>
 
